@@ -24,16 +24,11 @@ export class LabtestComponent implements OnInit {
   ngOnInit() {
     this.labtestForm = this.fb.group({
       userName: ['Clement', [Validators.required, Validators.minLength(3)]],
-      email: [''],
-      subscribe: [false],
-      password: [''],
-      confirmPassword: [''],
-      address: this.fb.group({
-        city: [''],
-        state: [''],
-        postalCode: ['']
-      })
-
+      dateOfBirth: [''],
+      testType: [''],
+      gender: [''],
+      mobilePhone: [''],
+      
     });
   }
 
