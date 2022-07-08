@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LabtestService } from '..//labtest.service';
 
 
@@ -13,6 +13,9 @@ import { LabtestService } from '..//labtest.service';
 export class LabtestComponent implements OnInit {
 
   labtestForm!: FormGroup;
+
+
+
 
   get userName() {
     return this.labtestForm.get('userName');
@@ -28,9 +31,11 @@ export class LabtestComponent implements OnInit {
       testType: [''],
       gender: [''],
       mobilePhone: [''],
-      
+
     });
   }
+
+
 
   loadApiData() {
     this.labtestForm.patchValue({
